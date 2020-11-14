@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: azure;
+  font-size: 16px;
+}
+
+body {
+  background-color: #e5eff5;
+  font-family: "Karla", sans-serif;
+}
+
+.container-fluid {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2% 0 2% 0;
+}
+
+.container {
+  width: 90%;
+  min-height: 85vh;
+  margin: auto;
+  -webkit-box-shadow: -5px 10px 21px -1px rgba(0, 0, 0, 0.096);
+          box-shadow: -5px 10px 21px -1px rgba(0, 0, 0, 0.096);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.join {
+  background-color: white;
+  padding: 8%;
+  border-radius: 10px 10px 0 0;
+}
+
+.join h1 {
+  color: #2ab2af;
+  font-size: 1.4rem;
+}
+
+.join h2 {
+  color: #c0df34;
+  margin: 5% 0 5% 0;
+}
+
+.join p {
+  color: #98a6bd;
+  line-height: 1.4rem;
+}
+
+.price {
+  background-color: #2ab2af;
+  padding: 8%;
+}
+
+.precio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2% 0 2% 0;
+}
+
+.precio_month {
+  color: rgba(203, 255, 244, 0.616);
+  margin-left: 4%;
+  display: inline-block;
+  padding-top: -10px;
+  font-size: 0.9rem;
+}
+
+.precio_dolar {
+  font-size: 2rem;
+}
+
+.button {
+  width: 80%;
+  -webkit-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.37);
+          box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.37);
+  background-color: #c0df34;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 12px 30px;
+  text-decoration: none;
+  margin-top: 10%;
+}
+
+.whyus {
+  background-color: #4fbfbe;
+  padding: 8%;
+  border-radius: 0 0 10px 10px;
+}
+
+.whyus ul {
+  margin-top: 5%;
+}
+
+.whyus ul li {
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container-fluid {
+    max-height: 100vh;
+    padding: 0;
+  }
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+    -ms-grid-columns: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-areas: "join join" "price whyus";
+    width: 45vw;
+    min-height: 45vh;
+  }
+  .join {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: join;
+    padding: 5%;
+  }
+  .join h2 {
+    margin: 3% 0 3% 0;
+  }
+  .price {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: price;
+    padding: 10%;
+    border-radius: 0 0 0 10px;
+  }
+  .price p {
+    font-size: 0.9rem;
+  }
+  .button {
+    width: 70%;
+  }
+  .precio {
+    margin: 5% 0 5% 0;
+  }
+  .whyus {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: whyus;
+    padding: 10%;
+    border-radius: 0 0 10px 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #2ab2af;
+}
+
+.attribution a {
+  color: #c0df34;
+}
+
+.attribution a:hover {
+  color: #2ab2af;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$textbody: 'Karla', sans-serif;
+
+$gray: hsl(204, 43%, 93%);
+$white: azure;
+$cian: hsl(179, 62%, 43%);
+$cianlight:  hsl(179, 47%, 53%);
+$yellow: hsl(71, 73%, 54%);
+$textgray: hsl(218, 22%, 67%);
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    font-size: 16px;
+}
+
+body {
+    background-color: $gray;
+    font-family: $textbody;
+  }
+
+.container-fluid {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0 2% 0;
+}
+
+.container {
+    width: 90%;
+    min-height: 85vh;
+    margin: auto;
+    box-shadow: -5px 10px 21px -1px rgba(0, 0, 0, 0.096);
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+//1
+.join {
+    background-color: white;
+    padding: 8%;
+    //display: flex;
+    //flex-direction: column;
+    border-radius:10px 10px 0 0;
+}
+.join h1 {
+    color: $cian;
+    font-size: 1.4rem;
+}
+.join h2 {
+    color: $yellow;
+    margin: 5% 0 5% 0;
+}
+.join p {
+    color: $textgray;
+    line-height: 1.4rem;
+}
+
+//2
+.price {
+    background-color: $cian;
+    padding: 8%;
+    //sborder-radius:0 0 0 10px;
+}
+
+.precio {
+    display: flex;
+    align-items: center;
+    margin: 2% 0 2% 0;
+    &_month{
+        //color: $cianlight;
+        color: rgba(203, 255, 244, 0.616);
+        margin-left: 4%;
+        display: inline-block;
+        padding-top: -10px;
+        font-size: 0.9rem;
+    }
+    &_dolar {
+        font-size: 2rem;
+    }
+}
+
+.button {
+    width: 80%;
+    box-shadow: 0px 5px 10px -4px rgba(0,0,0,0.37);
+	background-color:$yellow;
+    border-radius:5px;
+	display:inline-block;
+    font-size:1.1rem;
+    text-align: center;
+	padding:12px 30px;
+    text-decoration:none;
+    margin-top: 10%;
+}
+
+//3
+.whyus {
+    background-color: $cianlight;
+    padding: 8%;
+    border-radius:0 0 10px 10px;
+}
+
+.whyus ul {
+    margin-top: 5%;
+}
+.whyus ul li {
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container-fluid {
+        max-height: 100vh;
+        padding: 0;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-areas:
+        "join join"
+        "price whyus";
+        width: 45vw;
+        min-height: 45vh;
+    }
+
+    .join {
+        grid-area: join;
+        //height: 200px;
+        padding: 5%;
+    } 
+    .join h2 {
+        margin: 3% 0 3% 0;
+    }
+
+    .price {
+        grid-area: price;
+        padding: 10%;
+        border-radius:0 0 0 10px;
+    }
+
+    .price p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        width: 70%;
+    }    
+
+    .precio {
+        margin: 5% 0 5% 0;
+    }
+    
+    .whyus {
+        grid-area: whyus;
+        padding: 10%;
+        border-radius:0 0 10px 0;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; color: $cian; }
+.attribution a { color: $yellow; }
+.attribution a:hover { color: $cian; }
